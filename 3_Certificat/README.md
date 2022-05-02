@@ -88,5 +88,33 @@ Il faut ensuite signer la demande
 Il faut maintenant transférer le certificat signer sur la machine VPN
 ````shell
 scp pki/issued/server.crt root@157.245.45.81:/tmp
-scp pki/ca.crt sammy@your_server_ip:/tmp
+scp pki/ca.crt root@157.245.45.81:/tmp
+````
+
+### On retourne sur le serveur VPN
+
+On copie les fichiers dans le bon dossier
+
+````shell
+sudo cp /tmp/{server.crt,ca.crt} /etc/openvpn/
+cd EasyRSA-3.0.4/
+````
+
+Créez une clé Diffie-Hellman forte à utiliser lors de l’échange de clés. Cela peut prendre quelques minutes.
+
+````shell
+./easyrsa gen-dh
+````
+
+Générez une signature HMAC
+
+````shell
+openvpn --genkey --secret ta.key
+````
+
+Il faut maintenant copier les 2 nouveaux fichier dans le répertoire /etc/openvpn
+
+````shell
+sudo cp ~/EasyRSA-3.0.4/ta.key /etc/openvpn/
+sudo cp ~/EasyRSA-3.0.4/pki/dh.pem /etc/openvpn/
 ````
