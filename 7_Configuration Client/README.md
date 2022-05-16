@@ -117,3 +117,13 @@ sftp root@157.245.45.81:client-configs/files/client_name.ovpn ~/
 
 
 ### Installation de la configuration client
+
+#### _MacOS_
+
+Téléchargez [https://tunnelblick.net/](https://tunnelblick.net/), ce client openVPN est gratuit et opensource
+
+À la fin du téléchargement, tunneblick vous demandera si vous avez des fichiers de configurations, répondez que oui.
+
+![Mac](mac.png)
+
+Ouvrez ensuite le Finder et double cliquez sur le fichier .ovpn
