@@ -26,3 +26,21 @@ Il faut mettre l’IP de votre serveur à la ligne remote
 > Vérifier que le protocole utilisé est bien l’UDP
 
 ![Udp](udp.png)
+
+Il faut également décommenter les lignes user et group
+
+![Uncomment](uncomment.png)
+
+Commentez les directives ca, cert et key car on ajoutera les certificats et les clés dans le dossier lui-même
+
+![Comment](comment.png)
+
+Faire de même pour ``tls-auth``
+
+![Tls-auth](tls-auth.png)
+
+Utilisez les mêmes paramètres ``cypher`` et ``auth`` que ceux que vous avez définis dans le fichier ``/etc/openvpn/server.conf``
+
+![CypherxAuth](cypherxauth.png)
+
+Il faut ensuite ajouté key-direction n’importe où dans le fichier et régler le paramètre sur 1
