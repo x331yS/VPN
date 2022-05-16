@@ -20,7 +20,7 @@
 - Connexion SSH avec le serveur distant et conception et rédaction de la documentation Chapitre 0 et 1
 
 2 mai
-- Installation de OpenVPN et conception et rédaction de la documentation Chapitre 1 et 2 avec création des certificats
+- Installation de OpenVPN et conception et rédaction de la documentation Chapitre 2 et 3 avec création des certificats
   
 9 mai
 - Installation du Firewall et conception et rédaction de la documentation xxxxxx
