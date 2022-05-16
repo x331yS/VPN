@@ -118,7 +118,7 @@ sftp root@157.245.45.81:client-configs/files/client_name.ovpn ~/
 
 ### Installation de la configuration client
 
-#### _MacOS_
+### _MacOS_
 
 Téléchargez [https://tunnelblick.net/](https://tunnelblick.net/), ce client openVPN est gratuit et opensource
 
@@ -127,3 +127,24 @@ Téléchargez [https://tunnelblick.net/](https://tunnelblick.net/), ce client op
 ![Mac](mac.png)
 
 Ouvrez ensuite le Finder et double cliquez sur le fichier .ovpn
+
+### _Windows_
+
+Téléchargez l’application client OpenVPN pour Windows depuis la page de téléchargement d’[OpenVPN](https://openvpn.net/community-downloads/).
+Choisissez la version d’installation appropriée pour votre version de Windows.
+
+Après avoir installé OpenVPN, copiez le fichier .ovpn dans ``C:\Program Files\OpenVPN\config``
+
+Lorsque vous lancez OpenVPN, il voit automatiquement le profil et le rend disponible.
+Vous devez exécuter OpenVPN en tant qu’administrateur à chaque fois qu’il est utilisé, même par des comptes administratifs. Pour effectuer cette action sans avoir à cliquer sur le bouton droit de la souris et à sélectionner Exécuter en tant qu’administrateur chaque fois que vous utilisez le VPN, vous devez le pré-régler à partir d’un compte administratif. Cela signifie également que les utilisateurs standard devront entrer le mot de passe de l’administrateur pour utiliser OpenVPN. Les utilisateurs standard ne peuvent pas se connecter correctement au serveur à moins que l’application OpenVPN sur le client n’ait des droits d’administrateur, les privilèges élevés sont donc nécessaires.
+Pour que l’application OpenVPN s’exécute toujours en tant qu’administrateur, cliquez avec le bouton droit de la souris sur son icône de raccourci et allez dans Propriétés. En bas de l’onglet Compatibilité, cliquez sur le bouton Modifier les paramètres pour tous les utilisateurs. Dans la nouvelle fenêtre, cochez Exécuter ce programme en tant qu’administrateur.
+
+#### _Connexion_
+
+À chaque fois que vous lancez l’interface graphique d’OpenVPN, Windows vous demande si vous souhaitez autoriser le programme à apporter des modifications à votre ordinateur. Cliquez sur Oui. Le lancement de l’application client OpenVPN ne fait que placer l’applet dans la barre d’état système afin que vous puissiez connecter et déconnecter le VPN selon vos besoins : il n’établit pas réellement la connexion VPN.
+
+Une fois qu’OpenVPN est lancé, initiez une connexion en vous rendant dans l’applet de la barre d’état système et en cliquant avec le bouton droit de la souris sur l’icône de l’applet OpenVPN. Cela ouvre le menu contextuel. Sélectionnez client1 en haut du menu (c’est votre profil client1.ovpn) et choisissez Connecter.
+
+Une fenêtre d’état s’ouvrira, montrant la sortie du journal pendant que la connexion est établie, et un message s’affichera une fois que le client sera connecté.
+
+Déconnectez-vous du VPN de la même manière : allez dans l’applet de la barre d’état système, cliquez avec le bouton droit de la souris sur l’icône de l’applet OpenVPN, sélectionnez le profil du client et cliquez sur Déconnecter.
