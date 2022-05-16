@@ -44,3 +44,76 @@ Utilisez les mêmes paramètres ``cypher`` et ``auth`` que ceux que vous avez d�
 ![CypherxAuth](cypherxauth.png)
 
 Il faut ensuite ajouté key-direction n’importe où dans le fichier et régler le paramètre sur 1
+
+![KeyDirection](key-direction.png)
+
+Rajoutez ces lignes là à la fin du fichier
+
+````shell
+# script-security 2
+# up /etc/openvpn/update-resolv-conf
+# down /etc/openvpn/update-resolv-conf
+````
+
+>Vous décommenterez ces lignes si le client possède une machine sous Linux et qu’il possède un fichier ``/etc/openvpn/update-resolv-conf``
+
+### Compilation du fichier de configuration de base avec les différents fichiers de certificat
+
+````shell
+nano ~/client-configs/make_config.sh
+````
+
+_Voici le contenu du script :_
+
+````shell
+#!/bin/bash
+
+# First argument: Client identifier
+
+KEY_DIR=~/client-configs/keys
+OUTPUT_DIR=~/client-configs/files
+BASE_CONFIG=~/client-configs/base.conf
+
+cat ${BASE_CONFIG} \
+    <(echo -e '<ca>') \
+    ${KEY_DIR}/ca.crt \
+    <(echo -e '</ca>\n<cert>') \
+    ${KEY_DIR}/${1}.crt \
+    <(echo -e '</cert>\n<key>') \
+    ${KEY_DIR}/${1}.key \
+    <(echo -e '</key>\n<tls-auth>') \
+    ${KEY_DIR}/ta.key \
+    <(echo -e '</tls-auth>') \
+    > ${OUTPUT_DIR}/${1}.ovpn
+````
+
+Rendez le fichier exécutable en changeant les droits
+
+````shell
+chmod 700 ~/client-configs/make_config.sh
+````
+
+Déplacez les fichier ``client_name.crt`` et ``client_name.key`` dans le dossier ``~/client-configs`` puis éxécuter le script.
+
+````shell
+cd ~/client-configs
+sudo ./make_config.sh client_name
+````
+
+Un fichier a maintenant été créé dans le dossiers ``files``
+
+````shell
+ls ~/client-configs/files
+
+[Output]
+client_name.ovpn
+````
+
+Déplacez maintenant ce fichier sur votre machine qui souhaitera utiliser le VPN
+
+````shell
+sftp root@157.245.45.81:client-configs/files/client_name.ovpn ~/
+````
+
+
+### Installation de la configuration client
