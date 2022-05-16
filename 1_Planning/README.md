@@ -23,10 +23,10 @@
 - Installation de OpenVPN et conception et rédaction de la documentation Chapitre 2 et 3 avec création des certificats
   
 9 mai
-- Installation du Firewall et conception et rédaction de la documentation xxxxxx
+- Installation du Firewall et des clés clients et conception et rédaction de la documentation Chapitre 4
 
 16 mai
-- Firewall et Authentification utilisateurs ainsi que la conception et rédaction de la documentation xxxx
+- Configuration OpenVPN et Authentification utilisateurs ainsi que la conception et rédaction de la documentation Chapitre 5 et 6 et 7 + Sommaire
 
 23 mai
 - Gestion logs et certificats et Powerpoint et préparation supplémentaire pour la soutenance ainsi que la fin de la rédaction de la documentation
