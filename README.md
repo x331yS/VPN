@@ -37,9 +37,3 @@ Ce sommaire vous permet de vous rendre dans chaque chapitre de manière plus rap
 ### _Chapitre 7_
 
 [Configuration Client](https://github.com/x33lyS/VPN/tree/main/7_Configuration%20Client)
-
-## Sources
-
-[Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04-fr)
-
->Il y a eu une seule source pour toute la configuration.
