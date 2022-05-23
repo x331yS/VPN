@@ -37,4 +37,8 @@
 - OpenVPN, il s'agit d'un logiciel libre permettant de créer un réseau privé virtuel (VPN).
 - Serveur DigitalOcean distant.
 
+### Architecture de nos machines
+
+INSERER IMAGE
+
 
