@@ -1,13 +1,9 @@
-# OpenVPN
+# Description Projet
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
-## Description Projet
+ 
 
 ### _Offrir un accès à l’intranet depuis l’extérieur._
-
-#### - Accès distant
-- Via SSH
 
 #### - Utilisation d’une vrai IP publique 
 - Derrière votre box  
@@ -31,14 +27,22 @@
 > Idées Technos possibles (non exhaustif)•OpenVPN, OpenSwan, StrongSwan, etc.
 
 
-### _Description Outil Utilisé_
+### _Description Outils Utilisés_
 
-- Ubuntu pour lma machine virtuelle.
-- OpenVPN, il s'agit d'un logiciel libre permettant de créer un réseau privé virtuel (VPN).
-- Serveur DigitalOcean distant.
+### _Client_
+
+- 1 machine client afin de se connecter au serveur VPN
+
+### _Serveur_
+
+- 4 machines virtuelles
+    - pfSense afin de gérer le firewall
+    - un deuxième pfSense pour la redondance afin d'éviter toute panne
+    - un client qui nous permet d'accéder à l'interface pfSense (ici Windows 10)
+    - une VM qui servira de serveur Web pour l'intranet (ici Ubuntu)
 
 ### Architecture de nos machines
 
-INSERER IMAGE
+![Architecture](architecture.png)
 
 
