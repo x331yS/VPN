@@ -36,6 +36,10 @@ Ce sommaire vous permet de vous rendre dans chaque chapitre de manière plus rap
 
 ### _Chapitre 7_
 
-[Demo](https://github.com/x33lyS/VPN/tree/main/7_Demo)
+[Gestion des logs](https://github.com/x33lyS/VPN/tree/main/7_Logs)
+
+### _Chapitre 8_
+
+[Demo](https://github.com/x33lyS/VPN/tree/main/8_Demo)
 
 
