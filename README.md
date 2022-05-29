@@ -16,24 +16,26 @@ Ce sommaire vous permet de vous rendre dans chaque chapitre de manière plus rap
 
 ### _Chapitre 2_
 
-[Installation OpenVPN](https://github.com/x33lyS/VPN/tree/main/2_InstallationOpenVPN)
+[Configuration Réseau](https://github.com/x33lyS/VPN/tree/main/2_ConfigurationReseau)
 
 ### _Chapitre 3_
 
-[Certificats](https://github.com/x33lyS/VPN/tree/main/3_Certificat)
+[Redondance VPN](https://github.com/x33lyS/VPN/tree/main/3_RedondanceVPN)
 
 ### _Chapitre 4_
 
-[Clé Client](https://github.com/x33lyS/VPN/tree/main/4_Cl%C3%A9%20Client)
+[Certificats](https://github.com/x33lyS/VPN/tree/main/4_Certificats)
 
 ### _Chapitre 5_
 
-[Configuration OpenVPN](https://github.com/x33lyS/VPN/tree/main/5_Configuration%20OpenVPN)
+[Règles Firewall](https://github.com/x33lyS/VPN/tree/main/5_CreationRegles)
 
 ### _Chapitre 6_
 
-[Démarrage OpenVPN](https://github.com/x33lyS/VPN/tree/main/6_D%C3%A9marrage%20OpenVPN)
+[OpenVPN](https://github.com/x33lyS/VPN/tree/main/6_OpenVPN)
 
 ### _Chapitre 7_
 
-[Configuration Client](https://github.com/x33lyS/VPN/tree/main/7_Configuration%20Client)
+[Demo](https://github.com/x33lyS/VPN/tree/main/7_Demo)
+
+
