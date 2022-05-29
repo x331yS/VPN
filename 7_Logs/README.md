@@ -18,7 +18,7 @@ Pour cela, nous allons suivre plusieurs étapes :
 
 Il va ensuite falloir activer la gestion des logs à distance sur pfSense dans `Status → System logs → Settings`.
 
->Préciser l’ip du server log `192.168.15.20` suivi du port `514`.
+> Préciser l’ip du server log `192.168.15.20` suivi du port `514`.
 
 ![img_1.png](img_1.png)
 
@@ -50,7 +50,6 @@ On va maintenant modifier le fichier de configuration syslog-ng dans `/etc/syslo
 
 ![img_6.png](img_6.png)
 
-
 ### Archivage et purge des logs
 
 Pour l’archivage et la purge des logs, nous allons utiliser ``Logrotate`` qui permet de limiter la taille des fichiers journaux.
@@ -65,13 +64,21 @@ Pour l’archivage et la purge des logs, nous allons utiliser ``Logrotate`` qui 
 ![img_7.png](img_7.png)
 
 - Logrotate va générer une rotation à chaque fois que la taille du fichier atteint 1 Mo et lors de la 6e rotation, il supprimera le fichier le plus ancien.
-####
+
+#### 
+
 - Même si le fichier n’atteint pas 1 Mo, Logrotate effectuera toujours une rotation chaque jour et une fois qu’il atteint 5 rotations (5 jours) alors il supprimera le fichier archivé le plus ancien.
-####
+
+#### 
+
 - Comme le paramètre size prend la priorité sur le rotate 5, tant que le fichier n’atteint pas 1 Mo, aucune rotation ne se fera. Une fois que le fichier atteint la taille de 1Mo, une rotation sera effectuée. Une fois les 5 rotations atteintes, le plus ancien fichier archivé sera supprimé.
-####
+
+#### 
+
 - Pour tester manuellement, executer la commande `logrotate -f /etc/logrotate.conf`
-####
+
+#### 
+
 - Vérifier ensuite dans le dossier `/var/log/pfSense` que l’archive à bien été ajouté.
 
 ![img_8.png](img_8.png)
