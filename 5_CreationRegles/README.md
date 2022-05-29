@@ -1,5 +1,9 @@
 # Création des règles sur nos interfaces
 
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+
 Pour la configuration des règles, il faut se rendre dans **Firewall** -> **Rules**
 
 Appuyez maintenant sur **add** pour créer une règle.

@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-## pfSense
+## Configuration pfSense
 
 Nous avons besoins de **4 cartes réseaux** pour chacun des pfSense.
 
@@ -25,7 +25,7 @@ Nous avons besoins de **4 cartes réseaux** pour chacun des pfSense.
 
 ![pfSense 2](pfsense2.png)
 
-## Windows 10
+## Configuration Windows 10
 
 **Carte réseau** : LAN Segment pfsense_LAN car on doit pouvoir accéder à l'interface web du pfSense.
 - **IP** : 192.168.15.11/24
@@ -33,6 +33,7 @@ Nous avons besoins de **4 cartes réseaux** pour chacun des pfSense.
 - **DNS** : 192.168.15.54
 
 ## Serveur Web
+
 **Carte réseau** : LAN Segment DMZ
 
 Il faut tout d'abord installer Apache2.
@@ -50,6 +51,7 @@ Changer l'ip **addresses** en 192.168.25.12/24
 Changer la passerelle **gateway4** en 192.168.25.25.
 
 Pour valider, il faut relancer **netplan apply**
+
 ```sh
 sudo netplan apply
 ```

@@ -1,5 +1,8 @@
 # Installation et configuration d'OpenVPN
 
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
 Il faut tout d'abord télécharger le package OpenVPN
 
 ![img.png](img.png)

@@ -1,5 +1,7 @@
 # Redondance VPN
 
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
 Le redondance permet d'assurer le fonctionnement du VPN. Si l'un des 2 pfSense tombe en panne, le second prendra le
 relais. Nous allons donc synchroniser la configuration des 2 pfSense.
 
